@@ -1,7 +1,7 @@
 import React from 'react';
-import MelithaNavbar from '../Navbar';
+import MelithaNavbar from '../components/Navbar';
 import Carousel from 'react-bootstrap/Carousel';
-import FirstImage from '../../assets/FirstImage.png'
+import FirstImage from '../assets/FirstImage.png'
 
 
 function Home() {

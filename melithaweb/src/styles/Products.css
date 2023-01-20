@@ -14,18 +14,8 @@
     font-size: 20px;
 }
 
-.cardProducts{
-    display: flexbox;
-    
+/* Styles for the cards */
 
-}
-
-.AllProducts{
-    padding: 2%;
-    display: grid;
-    justify-content: center;
-    grid-auto-flow: dense;
-    grid-template-columns: 40% 40%;
-    gap: 10%;
-    
-}
+/* .allCardsProducts{
+    background: #C2F2DC ;
+} */

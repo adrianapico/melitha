@@ -1,8 +1,8 @@
 import { Routes, Route, } from 'react-router-dom';
-import Products from './components/pages/Products';
-import Home from './components/pages/Home';
-import Melitha from './components/pages/Melitha';
-import Cart from './components/pages/Cart';
+import Products from './pages/Products';
+import Home from './pages/Home';
+import Melitha from './pages/Melitha';
+import Cart from './pages/Cart';
 // import { Products, Home, Melitha, Cart } from './Pages'
 
 
