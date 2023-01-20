@@ -6,7 +6,7 @@ import Cart from './pages/Cart';
 // import { Products, Home, Melitha, Cart } from './Pages'
 
 
-function App() {
+function App ( ) {
 
   return (
     <div className="App">

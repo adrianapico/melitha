@@ -1,35 +1,26 @@
 import React, {useState} from 'react';
 import ModalProduct from './ModalProduct';
 import Card from 'react-bootstrap/Card';
-import PMaracuya from '../../assets/PMaracuya.jpg';
-import PFrutosRojos from '../../assets/PFrutosRojos.jpg';
-import PMilo from '../../assets/PMilo.jpg';
-import PLimon from '../../assets/PLimon.jpeg';
-import PBrownie from '../../assets/PBrownie.jpeg'
-import POreo from '../../assets/POreo.jpg'
+
 // import ProductCharacteristic from './ProductCharacteristic';
 
-function CardOfProduct ( ) {
+function CardOfProduct (props) {
 
-    const [ openModalProduct, setOpenModalProduct] = useState(false);
-
-    const handleClose = () => setOpenModalProduct(false);
-    const handleShow = () => setOpenModalProduct(true);
-    
-
+    const {allproducts} = props;
+ 
     return (
-        <Card onClick={ handleShow} >
-            <Card.Img variant="top" src= {PMaracuya} />
+
+        <Card >
+            <Card.Img src ={allproducts.imgPostre} alt={allproducts.namePostre} />
             <Card.Body>
-            <Card.Title>Postre de Maracuya</Card.Title>
-            <Card.Text>$3.500 - $60.000 </Card.Text>
+                <Card.Title>{allproducts.namePostre} </Card.Title>
+                <Card.Subtitle>
+                    ${allproducts.priceMinPostre} - ${allproducts.priceMaxPostre}
+                </Card.Subtitle>
+                <ModalProduct/>
             </Card.Body>
+        </Card>
 
-            <ModalProduct open={openModalProduct}  onClose={ handleClose} />
-
-            {/* { modalProduct && <ProductCharacteristic />} */}
-        </Card>             
-            
   );
 
 };

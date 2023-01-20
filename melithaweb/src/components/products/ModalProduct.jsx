@@ -1,30 +1,45 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useState } from 'react';
 
-const ModalProduct = ( {open, onClose} ) => {
+function ModalProduct ( ) {
 
-    if (!open) return null
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+    // if (!open) return null
 
     return (
-    <Modal open={open} onHide={onClose}>
-      <Modal.Dialog >
+      <>
+        <Button variant="light" onClick={handleShow}>
+          Ver
+        </Button>
 
-        <Modal.Header  closeButton  >
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
-          <p>Modal body text goes here.</p>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Button variant="secondary" onClick={onClose}>Close</Button>
-          <Button variant="primary">Save changes</Button>
-        </Modal.Footer>
-      </Modal.Dialog>
-    </Modal>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Modal title</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            I will not close if you click outside me. Don't even try to press
+            escape key.
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary">Añadir al carrito</Button>
+          </Modal.Footer>
+        </Modal>
+      </>
   )
 }
 
-export default ModalProduct
+export default ModalProduct;

@@ -1,5 +1,5 @@
 import React from 'react';
-import MelithaNavbar from '../components/Navbar';
+import MelithaNavbar from '../components/Header';
 import Carousel from 'react-bootstrap/Carousel';
 import FirstImage from '../assets/FirstImage.png'
 

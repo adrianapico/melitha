@@ -1,6 +1,6 @@
 import React from 'react'
 import OwnerMelitha from '../assets/OwnerMelitha.jpeg'
-import MelithaNavbar from '../components/Navbar'
+import MelithaNavbar from '../components/Header'
 
 const Melitha = () => {
   return (

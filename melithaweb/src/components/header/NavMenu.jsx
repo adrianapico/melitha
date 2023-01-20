@@ -13,7 +13,7 @@ function NavMenu () {
             {/* If I want to change the background of the Navbar I have to change "bg" */}
             {[false].map((expand) => (
 
-                <Navbar key={expand} bg="ligth" expand={expand} className="mb-3">
+                <Navbar key={expand} bg="ligth" expand={expand} className="mb-3" >
 
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
 

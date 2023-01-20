@@ -1,21 +1,23 @@
-import React from 'react'
+import React from 'react'; 
+import '../styles/index.css';
+import { Container } from 'react-bootstrap';
+import  Whatsapp from './footer/Whatsapp';
+import Ubication from './footer/Ubication';
+import PaymentMelitha from './footer/PaymentMelitha';
 
-const Footer = () => {
+
+function Footer() {
   return (
-    <div>Footer
+    <Container>
+      <footer className='containerFooter'>
+        <h1>Información de contacto Melitha</h1>
+        <Whatsapp /> 
+        <Ubication />
+        <PaymentMelitha />
 
-    ESTO PERTENECE AL Navbar
-    <nav className='navbar text-red-500 relative flex'>
-            <div className='container-fluid'>
-                <Link to="Products">Products</Link>
-                <Link to="/Home">Home</Link>
-                <Link to="/Melitha">Melitha</Link>
-                <Link to="/Cart">Cart</Link>
-
-                {/* <p onClick={()=>setIsOpen(!isOpen)}>BurgerMenu</p> */}
-
-            </div>
-        </nav>  </div>
+      </footer>
+      
+    </Container>
   )
 }
 
